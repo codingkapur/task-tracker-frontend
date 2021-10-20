@@ -15,7 +15,7 @@ function App() {
   // Functions
 
   const editTask = async (task) => {
-    await fetch(`http://localhost:4500/projects/tasktracker/${taskToEdit._id}`, {
+    await fetch(`http://localhost:4500/tasktracker/${taskToEdit._id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
@@ -40,7 +40,7 @@ function App() {
 
   const getTasks = async () => {
     try {
-      const res = await fetch("http://localhost:4500/projects/tasktracker", {
+      const res = await fetch("http://localhost:4500/tasktracker", {
         mode: "cors",
         // mode:'cors',
       });
@@ -62,7 +62,7 @@ function App() {
 
   const addTask = async (task) => {
     try {
-      const res = await fetch("http://localhost:4500/projects/tasktracker/", {
+      const res = await fetch("http://localhost:4500/tasktracker", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -79,7 +79,7 @@ function App() {
   //Delete Task
 
   const deleteTask = async (id) => {
-    await fetch(`http://localhost:4500/projects/tasktracker/${id}`, {
+    await fetch(`http://localhost:4500/tasktracker/${id}`, {
       method: "DELETE",
     });
     setTasks(tasks.filter((x) => x._id !== id));
@@ -99,7 +99,7 @@ function App() {
       completed: !task.completed,
     };
 
-    await fetch(`http://localhost:4500/projects/tasktracker/${task._id}`, {
+    await fetch(`http://localhost:4500/tasktracker/${task._id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
