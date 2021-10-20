@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgb(74, 111, 232),
+    rgba(3, 156, 226, 0.631)
+  );
+  font-family: "Lato", sans-serif;
+}
+.main__container {
+  width: 95%;
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 5px;
+  background: linear-gradient(180deg,rgba(255, 255, 255, 0.165), rgba(48, 179, 144, 0.213));
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+/* HEADER */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+.app-title {
+  text-shadow: 0 3px 2px rgba(255, 255, 255, 0.22);
+}
+/* GENERIC BUTTON  */
+.btn {
+  /* height: 40px; */
+  border: none;
+  padding:0.5rem;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.003);
+  transform-origin: top;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+.btn:active {
+  transform: scale(0.99);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+
+}
+/* FORM */
+.form {
+  margin: 1rem 0;
+  width: 90%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+.form-control {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin: 0 0;
+  align-items: center;
+}
+.form__input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: transparent;
+  outline: none;
+  transition: 0.2s;
+}
+.form__input:focus {
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
+}
+.form__label {
+  color: #fff;
+  text-transform: uppercase;
+}
+.btn__create-task {
+  margin: 0 auto;
+  width: 20%;
+}
+
+/* TASKS */
+.tasks__container {
+  width: 100%;
+}
+.task__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  background-color: rgba(255, 255, 255, 0.933);
+  border-radius: 5px;
+  padding: 0.75rem 0.5rem;
+  margin: 0.5rem 0;
+  background-color: rgba(225, 71, 71, 0.844);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.task__container.done {
+  background-color: rgba(71, 225, 97, 0.844);
+
+}
+.task__operations--container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.btn__operation:hover {
+  transform: scale(1.07);
+  transition: 0.2s linear;
+}
